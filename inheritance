@@ -1,0 +1,30 @@
+Write a program to give example for multiple inheritance in Java.
+CODE:
+interface friend1
+{
+float HT = 6.1f;
+void height();
+}
+interface friend2
+{
+float HT = 5.5f;
+void height();
+}
+class friend3 implements friend1 , friend2
+{
+public void height()
+{
+float ht= (friend1.HT + friend2.HT)/2 ;
+
+System.out.println(&quot;friend3 height = &quot;+ ht);
+}
+
+}
+class Main
+{
+public static void main(String args[])
+{
+friend3 f3 = new friend3();
+f3.height();
+}
+}
